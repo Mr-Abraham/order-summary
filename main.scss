@@ -1,0 +1,135 @@
+$primaryheading: hsl(223, 47%, 23%);
+$border: 1px solid red;
+@mixin mobile {
+    @media (min-width:500px) {
+        @content;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+    background: url(./images/pattern-background-desktop.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+img{
+    max-width: 100%;
+}
+main{
+    padding: 1.5em .5em;
+.container{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 50px 10px hsl(225, 10%, 75%);
+    width: 100%;
+    margin: auto;
+background: #fff;
+    .order-image{
+        width: 100%;
+img{
+    width: 100%;
+    z-index: 11;
+}
+    }
+    // orde-summary
+    .order-summary{
+        padding: 1em 2em;
+        text-align: center;
+        h2{
+            font-size: 2em;
+            font-weight: 800;
+            margin-bottom: 1em;
+            color: $primaryheading;
+        }
+        p{
+            line-height: 1.5;
+            margin-top: 1.5em;
+        }
+    }  // order summary ends
+// order plan
+.order-plan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    .plan{
+display: grid;
+grid-template-columns: 1fr 180px;
+align-items: center;
+img{
+    position: relative;
+    top: 15px;
+}
+h3{
+    position: relative;
+    top: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    color: $primaryheading;
+    margin-left: .5em;
+}
+p{
+    grid-column: 2/-1;
+    font-size: .9em;
+    margin-left: .5em;
+}
+    }
+.plan-btn{
+    a{
+        color: rgb(60, 60, 168);
+        text-decoration: none;
+        &:hover{
+            color:$primaryheading;
+        }
+    }
+}
+
+    
+}
+// order btn
+.order-btn{
+     padding: 2em;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     button{
+        border: 0;
+        background: hsl(245, 75%, 52%);
+        padding: 1em;
+        border-radius: 8px;
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin: 0;
+        }
+     }
+     a{
+         display: inline-block;
+         margin-top: 1.5em;
+         text-decoration: none;
+         color: #333;
+     }
+}
+
+}
+@media (min-width:550px){
+    .container{
+        max-width: 500px;
+    }
+}
+
+}
+
+
+
+
